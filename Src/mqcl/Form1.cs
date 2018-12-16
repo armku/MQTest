@@ -15,6 +15,9 @@ namespace mqcl
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// MQTT客户端
+        /// </summary>
         private MqttClient client;
         public Form1()
         {
@@ -44,25 +47,23 @@ namespace mqcl
    
   
         }
-        void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
             //处理接收到的消息  
             string msg = System.Text.Encoding.Default.GetString(e.Message);
             
              if (this.InvokeRequired)
              {
-                 MqttClient.MqttMsgPublishEventHandler setpos = new MqttClient.MqttMsgPublishEventHandler(client_MqttMsgPublishReceived);
+                 MqttClient.MqttMsgPublishEventHandler setpos = new MqttClient.MqttMsgPublishEventHandler(Client_MqttMsgPublishReceived);
                  this.Invoke(setpos, new object[] { sender },  e );
              }
              else
              {
                  richTextBox2.AppendText(e.Topic+":" + msg + "--"+DateTime.Now.ToString()+"\r\n"); 
              }
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             // 发布消息到主题 "/home/temperature" 消息质量为 2,不保留   
             //client.Publish("G/www", Encoding.UTF8.GetBytes(richTextBox1.Text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);   
@@ -70,25 +71,20 @@ namespace mqcl
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void but_sub_Click(object sender, EventArgs e)
+        private void But_sub_Click(object sender, EventArgs e)
         {
             client.Subscribe(new string[] { subtoc.Text }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
             MessageBox.Show("订阅OK");
         }
 
-        private void but_connet_Click(object sender, EventArgs e)
+        private void But_connet_Click(object sender, EventArgs e)
         {
             client = new MqttClient(IPAddress.Parse(ip.Text ));
             //  client = new MqttClient(IPAddress.Parse("115.29.111.161")); //主机为IP时  
             //client = new MqttClient("www.difiot.com"); //当主机地址为域名时  
 
             // 注册消息接收处理事件，还可以注册消息订阅成功、取消订阅成功、与服务器断开等事件处理函数  
-            client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
+            client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
 
 
             //生成客户端ID并连接服务器  
