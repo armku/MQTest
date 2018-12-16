@@ -102,7 +102,6 @@
             // 
             // port
             // 
-            this.port.Enabled = false;
             this.port.Location = new System.Drawing.Point(8, 79);
             this.port.Name = "port";
             this.port.Size = new System.Drawing.Size(132, 21);
