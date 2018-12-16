@@ -100,6 +100,11 @@ namespace mqcl
             //string clientId = "21122111222";
             client.Connect(clientId);
             MessageBox.Show("连接OK");
-        }  
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            client.Disconnect();
+        }
     }
 }

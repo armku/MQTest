@@ -230,6 +230,7 @@
             this.MinimumSize = new System.Drawing.Size(531, 411);
             this.Name = "Form1";
             this.Text = "MqttClient";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Connect.ResumeLayout(false);
             this.Connect.PerformLayout();
             this.groupBox2.ResumeLayout(false);
