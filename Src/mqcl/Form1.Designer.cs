@@ -115,7 +115,7 @@
             this.ip.Name = "ip";
             this.ip.Size = new System.Drawing.Size(132, 21);
             this.ip.TabIndex = 9;
-            this.ip.Text = "119.29.9.48";
+            this.ip.Text = "127.0.0.1";
             // 
             // but_connet
             // 
