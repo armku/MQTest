@@ -79,10 +79,18 @@ namespace mqcl
 
         private void But_connet_Click(object sender, EventArgs e)
         {
-            client = new MqttClient(IPAddress.Parse(ip.Text ));
-            //  client = new MqttClient(IPAddress.Parse("115.29.111.161")); //主机为IP时  
-            //client = new MqttClient("www.difiot.com"); //当主机地址为域名时  
-
+            var ips = IPAddress.Parse("127.0.0.1");
+            if (IPAddress.TryParse(ip.Text,out ips))
+            {
+                //主机为IP时  
+                client = new MqttClient(ips);                
+            }
+            else
+            {
+                //当主机地址为域名时  
+                client = new MqttClient(ip.Text);
+            }
+            
             // 注册消息接收处理事件，还可以注册消息订阅成功、取消订阅成功、与服务器断开等事件处理函数  
             client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
 
