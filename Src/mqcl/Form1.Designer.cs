@@ -67,7 +67,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(249, 57);
             this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.richTextBox1.Text = "hello Stdos";
             // 
             // richTextBox2
             // 
@@ -142,9 +142,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(107, 12);
             this.label2.TabIndex = 4;
-            this.label2.Text = "IP地址：";
+            this.label2.Text = "服务器(IP/网址)：";
             // 
             // groupBox2
             // 

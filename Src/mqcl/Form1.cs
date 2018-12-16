@@ -74,7 +74,7 @@ namespace mqcl
         private void But_sub_Click(object sender, EventArgs e)
         {
             client.Subscribe(new string[] { subtoc.Text }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
-            MessageBox.Show("订阅OK");
+            richTextBox2.AppendText("订阅OK\r\n");
         }
 
         private void But_connet_Click(object sender, EventArgs e)
@@ -99,11 +99,12 @@ namespace mqcl
             string clientId = Guid.NewGuid().ToString();
             //string clientId = "21122111222";
             client.Connect(clientId);
-            MessageBox.Show("连接OK");
+            richTextBox2.AppendText("连接OK\r\n");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            
             client.Disconnect();
         }
     }
