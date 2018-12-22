@@ -13,13 +13,13 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace mqcl
 {
-    public partial class Form1 : Form
+    public partial class FormMQTT : Form
     {
         /// <summary>
         /// MQTT客户端
         /// </summary>
         private MqttClient client;
-        public Form1()
+        public FormMQTT()
         {
             InitializeComponent();
             //创建客户端实例  

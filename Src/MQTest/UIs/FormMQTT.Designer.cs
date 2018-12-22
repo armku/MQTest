@@ -1,6 +1,6 @@
 ﻿namespace mqcl
 {
-    partial class Form1
+    partial class FormMQTT
     {
         /// <summary>
         /// 必需的设计器变量。
