@@ -45,6 +45,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pubtoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.tBoxClientId = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.Connect.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -88,6 +90,8 @@
             // 
             // Connect
             // 
+            this.Connect.Controls.Add(this.tBoxClientId);
+            this.Connect.Controls.Add(this.label6);
             this.Connect.Controls.Add(this.port);
             this.Connect.Controls.Add(this.ip);
             this.Connect.Controls.Add(this.but_connet);
@@ -95,7 +99,7 @@
             this.Connect.Controls.Add(this.label2);
             this.Connect.Location = new System.Drawing.Point(-6, 12);
             this.Connect.Name = "Connect";
-            this.Connect.Size = new System.Drawing.Size(146, 137);
+            this.Connect.Size = new System.Drawing.Size(146, 197);
             this.Connect.TabIndex = 4;
             this.Connect.TabStop = false;
             this.Connect.Text = "连接";
@@ -119,7 +123,7 @@
             // but_connet
             // 
             this.but_connet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.but_connet.Location = new System.Drawing.Point(18, 104);
+            this.but_connet.Location = new System.Drawing.Point(18, 164);
             this.but_connet.Name = "but_connet";
             this.but_connet.Size = new System.Drawing.Size(110, 27);
             this.but_connet.TabIndex = 8;
@@ -130,7 +134,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 64);
+            this.label5.Location = new System.Drawing.Point(13, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 7;
@@ -139,7 +143,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 17);
+            this.label2.Location = new System.Drawing.Point(13, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 12);
             this.label2.TabIndex = 4;
@@ -150,9 +154,9 @@
             this.groupBox2.Controls.Add(this.but_sub);
             this.groupBox2.Controls.Add(this.subtoc);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(-6, 155);
+            this.groupBox2.Location = new System.Drawing.Point(-6, 217);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(146, 129);
+            this.groupBox2.Size = new System.Drawing.Size(146, 88);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "订阅";
@@ -189,16 +193,16 @@
             // 
             this.groupBox1.Controls.Add(this.pubtoc);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(2, 290);
+            this.groupBox1.Location = new System.Drawing.Point(2, 308);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(138, 71);
+            this.groupBox1.Size = new System.Drawing.Size(138, 58);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "推送";
             // 
             // pubtoc
             // 
-            this.pubtoc.Location = new System.Drawing.Point(6, 44);
+            this.pubtoc.Location = new System.Drawing.Point(6, 35);
             this.pubtoc.Name = "pubtoc";
             this.pubtoc.Size = new System.Drawing.Size(120, 21);
             this.pubtoc.TabIndex = 11;
@@ -213,7 +217,24 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "推送主题：";
             // 
-            // Form1
+            // tBoxClientId
+            // 
+            this.tBoxClientId.Location = new System.Drawing.Point(8, 119);
+            this.tBoxClientId.Name = "tBoxClientId";
+            this.tBoxClientId.Size = new System.Drawing.Size(132, 21);
+            this.tBoxClientId.TabIndex = 12;
+            this.tBoxClientId.Text = "123456789";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "ID：";
+            // 
+            // FormMQTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,7 +248,7 @@
             this.Controls.Add(this.button1);
             this.MaximumSize = new System.Drawing.Size(531, 411);
             this.MinimumSize = new System.Drawing.Size(531, 411);
-            this.Name = "Form1";
+            this.Name = "FormMQTT";
             this.Text = "MqttClient";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Connect.ResumeLayout(false);
@@ -260,6 +281,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox pubtoc;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tBoxClientId;
+        private System.Windows.Forms.Label label6;
     }
 }
 

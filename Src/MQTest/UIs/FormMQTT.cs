@@ -96,7 +96,7 @@ namespace mqcl
 
 
             //生成客户端ID并连接服务器  
-            string clientId = Guid.NewGuid().ToString();
+            string clientId = tBoxClientId.Text;// Guid.NewGuid().ToString();
             //string clientId = "21122111222";
             try
             {
