@@ -67,7 +67,7 @@ namespace mqcl
         {
             // 发布消息到主题 "/home/temperature" 消息质量为 2,不保留   
             //client.Publish("G/www", Encoding.UTF8.GetBytes(richTextBox1.Text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);   
-            client.Publish(pubtoc.Text, Encoding.UTF8.GetBytes(richTextBox1.Text), 2, false);
+            client.Publish(pubtoc.Text, Encoding.UTF8.GetBytes(richTextBox1.Text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
 
         }
 
