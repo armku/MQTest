@@ -33,6 +33,8 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Connect = new System.Windows.Forms.GroupBox();
+            this.tBoxClientId = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.port = new System.Windows.Forms.TextBox();
             this.ip = new System.Windows.Forms.TextBox();
             this.but_connet = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pubtoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tBoxClientId = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.Connect.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -103,6 +103,23 @@
             this.Connect.TabIndex = 4;
             this.Connect.TabStop = false;
             this.Connect.Text = "连接";
+            // 
+            // tBoxClientId
+            // 
+            this.tBoxClientId.Location = new System.Drawing.Point(8, 119);
+            this.tBoxClientId.Name = "tBoxClientId";
+            this.tBoxClientId.Size = new System.Drawing.Size(132, 21);
+            this.tBoxClientId.TabIndex = 12;
+            this.tBoxClientId.Text = "123456789";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "ID：";
             // 
             // port
             // 
@@ -217,23 +234,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "推送主题：";
             // 
-            // tBoxClientId
-            // 
-            this.tBoxClientId.Location = new System.Drawing.Point(8, 119);
-            this.tBoxClientId.Name = "tBoxClientId";
-            this.tBoxClientId.Size = new System.Drawing.Size(132, 21);
-            this.tBoxClientId.TabIndex = 12;
-            this.tBoxClientId.Text = "123456789";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 104);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 12);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "ID：";
-            // 
             // FormMQTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -249,6 +249,7 @@
             this.MaximumSize = new System.Drawing.Size(531, 411);
             this.MinimumSize = new System.Drawing.Size(531, 411);
             this.Name = "FormMQTT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MqttClient";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Connect.ResumeLayout(false);
