@@ -35,8 +35,8 @@
             this.Connect = new System.Windows.Forms.GroupBox();
             this.tBoxClientId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.port = new System.Windows.Forms.TextBox();
-            this.ip = new System.Windows.Forms.TextBox();
+            this.tBoxPort = new System.Windows.Forms.TextBox();
+            this.tBoxIP = new System.Windows.Forms.TextBox();
             this.but_connet = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,8 +92,8 @@
             // 
             this.Connect.Controls.Add(this.tBoxClientId);
             this.Connect.Controls.Add(this.label6);
-            this.Connect.Controls.Add(this.port);
-            this.Connect.Controls.Add(this.ip);
+            this.Connect.Controls.Add(this.tBoxPort);
+            this.Connect.Controls.Add(this.tBoxIP);
             this.Connect.Controls.Add(this.but_connet);
             this.Connect.Controls.Add(this.label5);
             this.Connect.Controls.Add(this.label2);
@@ -123,19 +123,19 @@
             // 
             // port
             // 
-            this.port.Location = new System.Drawing.Point(8, 79);
-            this.port.Name = "port";
-            this.port.Size = new System.Drawing.Size(132, 21);
-            this.port.TabIndex = 10;
-            this.port.Text = "1883";
+            this.tBoxPort.Location = new System.Drawing.Point(8, 79);
+            this.tBoxPort.Name = "port";
+            this.tBoxPort.Size = new System.Drawing.Size(132, 21);
+            this.tBoxPort.TabIndex = 10;
+            this.tBoxPort.Text = "1883";
             // 
             // ip
             // 
-            this.ip.Location = new System.Drawing.Point(8, 40);
-            this.ip.Name = "ip";
-            this.ip.Size = new System.Drawing.Size(132, 21);
-            this.ip.TabIndex = 9;
-            this.ip.Text = "127.0.0.1";
+            this.tBoxIP.Location = new System.Drawing.Point(8, 40);
+            this.tBoxIP.Name = "ip";
+            this.tBoxIP.Size = new System.Drawing.Size(132, 21);
+            this.tBoxIP.TabIndex = 9;
+            this.tBoxIP.Text = "127.0.0.1";
             // 
             // but_connet
             // 
@@ -271,8 +271,8 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox Connect;
-        private System.Windows.Forms.TextBox port;
-        private System.Windows.Forms.TextBox ip;
+        private System.Windows.Forms.TextBox tBoxPort;
+        private System.Windows.Forms.TextBox tBoxIP;
         private System.Windows.Forms.Button but_connet;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;

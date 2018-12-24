@@ -80,14 +80,14 @@ namespace mqcl
 
         private void But_connet_Click(object sender, EventArgs e)
         {
-            PortCfg.Current.Server = this.ip.Text;
-            PortCfg.Current.Port = Int32.Parse(this.port.Text);
+            PortCfg.Current.Server = this.tBoxIP.Text;
+            PortCfg.Current.Port = Int32.Parse(this.tBoxPort.Text);
             PortCfg.Current.ClientID = tBoxClientId.Text;
 
             PortCfg.Current.Save();
 
             var ips = IPAddress.Parse("127.0.0.1");
-            if (IPAddress.TryParse(ip.Text, out ips))
+            if (IPAddress.TryParse(tBoxIP.Text, out ips))
             {
                 //主机为IP时  
                 client = new MqttClient(ips);
@@ -95,7 +95,7 @@ namespace mqcl
             else
             {
                 //当主机地址为域名时  
-                client = new MqttClient(ip.Text);
+                client = new MqttClient(tBoxIP.Text);
             }
 
             // 注册消息接收处理事件，还可以注册消息订阅成功、取消订阅成功、与服务器断开等事件处理函数  
@@ -125,8 +125,8 @@ namespace mqcl
 
         private void FormMQTT_Load(object sender, EventArgs e)
         {
-            this.ip.Text = PortCfg.Current.Server;
-            this.port.Text = PortCfg.Current.Port.ToString();
+            this.tBoxIP.Text = PortCfg.Current.Server;
+            this.tBoxPort.Text = PortCfg.Current.Port.ToString();
             this.tBoxClientId.Text = PortCfg.Current.ClientID;
         }
     }
