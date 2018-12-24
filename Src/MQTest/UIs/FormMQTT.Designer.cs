@@ -252,6 +252,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MqttClient";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.FormMQTT_Load);
             this.Connect.ResumeLayout(false);
             this.Connect.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MQTest.Config;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,6 +80,12 @@ namespace mqcl
 
         private void But_connet_Click(object sender, EventArgs e)
         {
+            PortCfg.Current.Server = this.ip.Text;
+            PortCfg.Current.Port = Int32.Parse(this.port.Text);
+            PortCfg.Current.ClientID = tBoxClientId.Text;
+
+            PortCfg.Current.Save();
+
             var ips = IPAddress.Parse("127.0.0.1");
             if (IPAddress.TryParse(ip.Text, out ips))
             {
@@ -114,6 +121,13 @@ namespace mqcl
         {
             if (client != null && client.IsConnected)
                 client.Disconnect();
+        }
+
+        private void FormMQTT_Load(object sender, EventArgs e)
+        {
+            this.ip.Text = PortCfg.Current.Server;
+            this.port.Text = PortCfg.Current.Port.ToString();
+            this.tBoxClientId.Text = PortCfg.Current.ClientID;
         }
     }
 }
