@@ -1,0 +1,8 @@
+/Bin/*.pdb
+/Bin/*.exe
+/Bin/M2Mqtt.Net.dll
+/Src/.vs
+/Src/bin
+/Src/MQTest/obj
+/Src/MQTest/bin
+/Src/M2Mqtt/obj
