@@ -6,3 +6,5 @@
 /Src/MQTest/obj
 /Src/MQTest/bin
 /Src/M2Mqtt/obj
+/Bin/Config
+*.log

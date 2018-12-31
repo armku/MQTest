@@ -47,6 +47,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pubtoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnClearRcv = new System.Windows.Forms.Button();
             this.Connect.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,18 +122,18 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "ID：";
             // 
-            // port
+            // tBoxPort
             // 
             this.tBoxPort.Location = new System.Drawing.Point(8, 79);
-            this.tBoxPort.Name = "port";
+            this.tBoxPort.Name = "tBoxPort";
             this.tBoxPort.Size = new System.Drawing.Size(132, 21);
             this.tBoxPort.TabIndex = 10;
             this.tBoxPort.Text = "1883";
             // 
-            // ip
+            // tBoxIP
             // 
             this.tBoxIP.Location = new System.Drawing.Point(8, 40);
-            this.tBoxIP.Name = "ip";
+            this.tBoxIP.Name = "tBoxIP";
             this.tBoxIP.Size = new System.Drawing.Size(132, 21);
             this.tBoxIP.TabIndex = 9;
             this.tBoxIP.Text = "127.0.0.1";
@@ -168,6 +169,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnClearRcv);
             this.groupBox2.Controls.Add(this.but_sub);
             this.groupBox2.Controls.Add(this.subtoc);
             this.groupBox2.Controls.Add(this.label3);
@@ -181,9 +183,9 @@
             // but_sub
             // 
             this.but_sub.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.but_sub.Location = new System.Drawing.Point(18, 59);
+            this.but_sub.Location = new System.Drawing.Point(8, 59);
             this.but_sub.Name = "but_sub";
-            this.but_sub.Size = new System.Drawing.Size(110, 27);
+            this.but_sub.Size = new System.Drawing.Size(63, 27);
             this.but_sub.TabIndex = 12;
             this.but_sub.Text = "订阅";
             this.but_sub.UseVisualStyleBackColor = true;
@@ -233,6 +235,17 @@
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 5;
             this.label4.Text = "推送主题：";
+            // 
+            // btnClearRcv
+            // 
+            this.btnClearRcv.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnClearRcv.Location = new System.Drawing.Point(77, 58);
+            this.btnClearRcv.Name = "btnClearRcv";
+            this.btnClearRcv.Size = new System.Drawing.Size(63, 27);
+            this.btnClearRcv.TabIndex = 13;
+            this.btnClearRcv.Text = "清理";
+            this.btnClearRcv.UseVisualStyleBackColor = true;
+            this.btnClearRcv.Click += new System.EventHandler(this.btnClearRcv_Click);
             // 
             // FormMQTT
             // 
@@ -285,6 +298,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tBoxClientId;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnClearRcv;
     }
 }
 

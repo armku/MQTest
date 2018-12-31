@@ -129,5 +129,10 @@ namespace mqcl
             this.tBoxPort.Text = PortCfg.Current.Port.ToString();
             this.tBoxClientId.Text = PortCfg.Current.ClientID;
         }
+
+        private void btnClearRcv_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = "";
+        }
     }
 }
