@@ -69,12 +69,15 @@ namespace mqcl
             // 发布消息到主题 "/home/temperature" 消息质量为 2,不保留   
             //client.Publish("G/www", Encoding.UTF8.GetBytes(richTextBox1.Text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);   
             client.Publish(pubtoc.Text, Encoding.UTF8.GetBytes(richTextBox1.Text), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-
+            PortCfg.Current.pubtoc = pubtoc.Text;
+            PortCfg.Current.Save();
         }
 
         private void But_sub_Click(object sender, EventArgs e)
         {
             client.Subscribe(new string[] { subtoc.Text }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            PortCfg.Current.subtoc = subtoc.Text;
+            PortCfg.Current.Save();
             richTextBox2.AppendText("订阅OK\r\n");
         }
 
@@ -128,6 +131,8 @@ namespace mqcl
             this.tBoxIP.Text = PortCfg.Current.Server;
             this.tBoxPort.Text = PortCfg.Current.Port.ToString();
             this.tBoxClientId.Text = PortCfg.Current.ClientID;
+            this.subtoc.Text = PortCfg.Current.subtoc;
+            this.pubtoc.Text = PortCfg.Current.pubtoc;
         }
 
         private void btnClearRcv_Click(object sender, EventArgs e)

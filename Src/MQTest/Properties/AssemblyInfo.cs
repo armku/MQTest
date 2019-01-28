@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MQTest")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2016-2018")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2016-2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.2018.1216")]
-[assembly: AssemblyFileVersion("0.1.2018.1216")]
+[assembly: AssemblyVersion("0.1.2019.0128")]
+[assembly: AssemblyFileVersion("0.1.2019.0128")]

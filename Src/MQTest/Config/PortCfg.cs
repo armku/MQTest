@@ -54,6 +54,14 @@ namespace MQTest.Config
         /// </summary>
         [Description("是否发送新行")]
         public Boolean FlagSendNewLine { get; set; }
+        /// <summary>
+        /// 订阅主题
+        /// </summary>
+        public String subtoc { get; set; } = "G/#";
+        /// <summary>
+        /// 发布/推送主题
+        /// </summary>
+        public String pubtoc { get; set; } = "G/#";
 
         protected override void OnNew()
         {
@@ -65,6 +73,8 @@ namespace MQTest.Config
             this.FlagSendNewLine = false;
             this.ClientID = "123456789";
             this.StrPubToc = "G/ddd";
+            this.subtoc = "ShareDevince/RTV/IMEI";
+            this.pubtoc = "ShareDevince/RTV/IMEI";
         }
     }
 }
