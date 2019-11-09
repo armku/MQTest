@@ -8,3 +8,6 @@
 /Src/M2Mqtt/obj
 /Bin/Config
 *.log
+/Src/ConsoleApp1/bin
+/Src/ConsoleApp1/Config
+/Src/ConsoleApp1/obj
